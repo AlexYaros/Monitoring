@@ -5,7 +5,7 @@ import os
 l = "true"
 a = psutil.disk_usage("/")
 b = psutil.virtual_memory()
-
+#ajshdgkjasdgk
 print("")
 print("Festplatte:")
 print("Max. Speicher:", round(a.total / (1024.0 ** 3), 2), "GB")
