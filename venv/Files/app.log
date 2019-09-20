@@ -1,1 +1,30 @@
 WARNING:root:Hohe Auslastung
+WARNING:root:Hohe Auslastung
+WARNING:root:Hohe Auslastung
+WARNING:root:Wenig freier Arbeitsspeicher
+2019-09-19 16:41:36,597 Wenig freier Arbeitsspeicher
+2019-09-19 16:41:55,908 Wenig freier Arbeitsspeicher
+2019-09-19 16:42:11,617 Wenig freier Arbeitsspeicher
+2019-09-19 16:42:12,619 Hohe Auslastung
+2019-09-19 16:42:24,320 Wenig freier Arbeitsspeicher
+2019-09-19 16:42:25,324 Hohe Auslastung
+2019-09-19 16:44:53,600 Wenig freier Arbeitsspeicher
+2019-09-19 16:45:31,603 Wenig freier Arbeitsspeicher
+2019-09-19 16:45:32,104 CPU-Auslastung bei
+2019-09-19 16:45:32,606 Hohe CPU-Auslastung
+2019-09-19 16:46:00,766 Wenig freier Arbeitsspeicher
+2019-09-19 16:46:10,619 Wenig freier Arbeitsspeicher
+2019-09-19 16:46:45,020 Wenig freier Arbeitsspeicher
+2019-09-19 16:48:22,821 Wenig freier Arbeitsspeicher
+2019-09-19 16:48:23,323 CPU-Auslastung bei
+2019-09-19 16:48:23,825 Hohe CPU-Auslastung
+2019-09-19 16:48:54,868 CPU-Auslastung bei
+2019-09-19 16:48:55,369 Hohe CPU-Auslastung
+2019-09-19 16:49:38,645 Hohe CPU-Auslastung
+2019-09-19 16:50:18,044 Hohe CPU-Auslastung
+2019-09-19 16:50:23,495 Hohe CPU-Auslastung
+2019-09-19 16:50:54,959 CPU-Auslastung bei
+2019-09-19 16:50:55,460 Hohe CPU-Auslastung
+2019-09-19 16:51:08,919 CPU-Auslastung bei
+2019-09-19 16:55:02,129 svmem(total=7664390144, available=4431314944, percent=42.2, used=2440249344, free=2426544128, active=3336716288, inactive=1256005632, buffers=268165120, cached=2529431552, shared=493703168, slab=277639168)
+2019-09-19 16:55:22,000 svmem(total=7664390144, available=4428730368, percent=42.2, used=2441637888, free=2423898112, active=3338260480, inactive=1256062976, buffers=268193792, cached=2530660352, shared=494866432, slab=277704704)
