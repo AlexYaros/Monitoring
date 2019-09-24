@@ -14,6 +14,9 @@ def Festplatte():
     print("Max. Speicher:", round(a.total / (1024.0 ** 3), 2), "GB")
     print("Benutzter Speicher:", round(a.used / (1024.0 ** 3), 2), "GB")
     print("Freier Speicher:", round(a.free / (1024.0 ** 3), 2), "GB")
+    if a.free < 21474836480:
+        logging.warning("Wenig freier Festplattenplatz")
+        print("Wenig freier Festplattenplatz")
     print("")
 
 def Arbeitsspeicher():
@@ -37,6 +40,8 @@ def CPU():
 Festplatte()
 Arbeitsspeicher()
 CPU()
+
+#logging.info("No warnings")
 
 print("")
 #print(os.system("ps -a"))
