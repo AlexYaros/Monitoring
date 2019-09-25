@@ -1,15 +1,7 @@
+#!/usr/bin/python3
+
 import psutil
 import argparse
-
-parser = argparse.ArgumentParser(description='Monitoring system stats.')
-
-# Adding arguments with descriptions
-parser.add_argument("all", default="all", help="Display all informations")
-parser.add_argument("ram", type=str, help='Displays information about ram usage')
-parser.add_argument("hdd", type=str, help="Displays information about storage usage")
-parser.add_argument("cpu", type=str, help="Displays information about cpu usage",)
-args = parser.parse_args()
-print(args)
 
 
 def HDD():
@@ -30,16 +22,29 @@ def CPU():
     return c
 
 
-if args.hdd:
-    HDD()
+parser = argparse.ArgumentParser(description='Monitoring system stats.')
 
-if args.ram:
-    RAM()
+# Adding arguments with descriptions
+parser.add_argument("all", nargs="?", type=str, help="Display all information")
+parser.add_argument("ram", nargs="?", type=str, help='Displays information about ram usage')
+parser.add_argument("hdd", nargs="?", type=str, help="Displays information about storage usage")
+parser.add_argument("cpu", nargs="?", type=str, help="Displays information about cpu usage", )
+args = parser.parse_args()
 
-if args.cpu:
-    CPU()
 
 if args.all:
     HDD()
     RAM()
+    CPU()
+
+
+if args.hdd:
+    HDD()
+
+
+elif args.ram:
+    RAM()
+
+
+elif args.cpu:
     CPU()
