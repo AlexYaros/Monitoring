@@ -9,6 +9,9 @@ b = psutil.virtual_memory()
 
 print("")
 
+#Auslesung der Werte der Festplatte: total, benutzt und frei.
+#Alarm, wenn freier Speicherplatz weniger als 20GB beträgt
+
 def Festplatte():
     print("Festplatte:")
     print("Max. Speicher:", round(a.total / (1024.0 ** 3), 2), "GB")
@@ -19,6 +22,9 @@ def Festplatte():
         print("Wenig freier Festplattenplatz")
     print("")
 
+#Auslesung der Werte des Arbeitsspeichers: total, frei und verwendet.
+#Alarm, wenn freier Arbeitsspeicher weniger als 1GB beträgt
+
 def Arbeitsspeicher():
     print("Arbeitsspeicher:")
     print("Max. Speicher:", round(b.total / (1024.0 ** 3), 2), "GB")
@@ -28,6 +34,10 @@ def Arbeitsspeicher():
         logging.warning("Wenig freier Arbeitsspeicher")
         print("Wenig freier Arbeitsspeicher")
     print("")
+
+
+#Auslesung der CPU-Auslastung
+# Alarm, wenn Grenzwert von 80% Auslastung überschritten wird
 
 def CPU():
     #print("CPU-Auslastung:", psutil.cpu_percent(0.5))
