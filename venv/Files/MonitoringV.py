@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-#import alarm
+# import alarm
 import psutil
 import argparse
 import os
@@ -10,7 +10,7 @@ def main():
     print()
     print("Hello", os.getlogin())
     print()
-    print("Here is your system status overview.",os.uname().version)
+    print("Here is your system status overview.", os.uname().version)
     print("For a list of commands, run this file with the parameter -h")
     print()
     print()
@@ -32,17 +32,16 @@ def CPU():
     return c
 
 
-
 parser = argparse.ArgumentParser(description='Monitoring system stats.')
 
 # Adding optional arguments with descriptions
 group = parser.add_mutually_exclusive_group()
-group.add_argument("-hdd", action="store_true", help = "Displays information about storage usage")
+group.add_argument("-hdd", action="store_true", help="Displays information about storage usage")
 group.add_argument("-ram", action="store_true", help='Displays information about ram usage')
 group.add_argument("-cpu", action="store_true", help='Displays information about ram usage')
 args = parser.parse_args()
 
-# Implement arguments
+# Implementing arguments
 if __name__ == "__main__":
     main()
     if args.hdd:

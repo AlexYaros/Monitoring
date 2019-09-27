@@ -2,9 +2,32 @@ import logging
 import MonitoringV
 import configparser
 import os
+import smtplib, ssl
 
 config = configparser.ConfigParser()
 config.read("config.ini")
+
+absender = str(config.get("SMTP", "absender"))
+password = str(config.get("SMTP", "password"))
+empfaenger = str(config.get("SMTP", "empfaenger"))
+smtphost = str(config.get("SMTP", "smtphost"))
+port = int(config.get("SMTP", "port"))
+
+message = """\
+Subject: Hi there
+
+This message is sent from Python."""
+
+def mail():
+    # Create a secure SSL context
+    context = ssl.create_default_context()
+
+    # Specifying the server address, port, sender and password
+    with smtplib.SMTP_SSL(smtphost, port, context=context) as server:
+        server.login(absender, password)
+        server.sendmail(absender, empfaenger, message)
+
+
 RAMsoftlimit = float(config.get("LIMIT", "RAMsoftlimit"))
 RAMhardlimit = float(config.get("LIMIT", "RAMhardlimit"))
 HDDsoftlimit = float(config.get("LIMIT", "HDDsoftlimit"))
@@ -42,6 +65,11 @@ elif RAMsoftlimit > RAM < RAMhardlimit:
 if HDDsoftlimit > HDD > HDDhardlimit:
     print('Low available storage capacity at', HDD, "GB")
     logging.warning("Low available storage capacity at %s GB", HDD)
+    message = """\
+Subject: Monitoring warning
+
+Low available storage capacity at)."""
+    mail()
 
 elif HDDsoftlimit > HDD < HDDhardlimit:
     print("Warning! Very low available storage capacity at", HDD, "GB")
