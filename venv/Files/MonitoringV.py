@@ -1,50 +1,59 @@
 #!/usr/bin/python3
 
+#import alarm
 import psutil
 import argparse
+import os
 
 
+def main():
+    print()
+    print("Hello", os.getlogin())
+    print()
+    print("Here is your system status overview.",os.uname().version)
+    print("For a list of commands, run this file with the parameter -h")
+    print()
+    print()
+
+
+# Defining monitoring functions
 def HDD():
     a = round(psutil.disk_usage("/").free / (1024.0 ** 3), 2)
-    print(a, "GB")
     return a
 
 
 def RAM():
     b = round(psutil.virtual_memory().available / (1024.0 ** 3), 2)
-    print(b, "GB")
     return b
 
 
 def CPU():
-    c = psutil.cpu_percent(1)
-    print(c, "%")
+    c = psutil.cpu_percent(0.5)
     return c
+
 
 
 parser = argparse.ArgumentParser(description='Monitoring system stats.')
 
-# Adding arguments with descriptions
-parser.add_argument("all", nargs="?", type=str, help="Display all information")
-parser.add_argument("ram", nargs="?", type=str, help='Displays information about ram usage')
-parser.add_argument("hdd", nargs="?", type=str, help="Displays information about storage usage")
-parser.add_argument("cpu", nargs="?", type=str, help="Displays information about cpu usage", )
+# Adding optional arguments with descriptions
+group = parser.add_mutually_exclusive_group()
+group.add_argument("-hdd", action="store_true", help = "Displays information about storage usage")
+group.add_argument("-ram", action="store_true", help='Displays information about ram usage')
+group.add_argument("-cpu", action="store_true", help='Displays information about ram usage')
 args = parser.parse_args()
 
+# Implement arguments
+if __name__ == "__main__":
+    main()
+    if args.hdd:
+        print("Available storage =", HDD(), "GB")
+    elif args.ram:
+        print("Available RAM =", RAM(), "GB")
+    elif args.cpu:
+        print("Current CPU usage =", CPU(), "%")
+    else:
+        print("Available storage =", HDD(), "GB")
+        print("Available RAM =", RAM(), "GB")
+        print("Current CPU usage =", CPU(), "%")
 
-if args.all:
-    HDD()
-    RAM()
-    CPU()
-
-
-if args.hdd:
-    HDD()
-
-
-elif args.ram:
-    RAM()
-
-
-elif args.cpu:
-    CPU()
+import alarm

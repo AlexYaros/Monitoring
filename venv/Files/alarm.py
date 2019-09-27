@@ -12,34 +12,36 @@ CPUsoftlimit = float(config.get("LIMIT", "CPUsoftlimit"))
 CPUhardlimit = float(config.get("LIMIT", "CPUhardlimit"))
 
 
-# for key in config["SMTP"]:  # Auf alle Elemente einer Section zugreifen
-#   print(key, config["SMTP"][key])
-
-# print(config["LIMIT"]["HDDsoftlimit"])  # auf ein Element zugreifen
-
-
 logging.basicConfig(filename='app.log', format='%(asctime)s %(message)s')
 
-if MonitoringV.CPU() > CPUsoftlimit:
-    print("High cpu usage")
-    logging.warning("High cpu usage")
+CPU = MonitoringV.CPU()
+RAM = MonitoringV.RAM()
+HDD = MonitoringV.HDD()
 
-elif MonitoringV.CPU() > CPUhardlimit:
-    print("Warning! Very high cpu usage")
-    logging.warning("Warning! Very high cpu usage")
+#print(CPU)
+#print(RAM)
+#print(HDD)
 
-if MonitoringV.RAM() < RAMsoftlimit:
-    print("Low available RAM")
-    logging.warning("Low available RAM")
+if CPUsoftlimit < CPU < CPUhardlimit:
+    print("High cpu usage at", CPU, "%")
+    logging.warning("High cpu usage at %s", CPU)
 
-elif MonitoringV.RAM() < RAMhardlimit:
-    print("Warning! Very low available RAM")
-    logging.warning("Warning! Very low available RAM")
+elif CPUsoftlimit < CPU > CPUhardlimit:
+    print("Warning! Very high cpu usage at", CPU, "%")
+    logging.warning("Warning! Very high cpu usage at %s", CPU)
 
-if MonitoringV.HDD() < HDDsoftlimit:
-    print("Low storage capacity")
-    logging.warning("Low storage capacity")
+if RAMsoftlimit > RAM > RAMhardlimit:
+    print("Low available RAM at", RAM, "GB")
+    logging.warning('Low available RAM at %s GB', RAM)
 
-elif MonitoringV.HDD() < HDDhardlimit:
-    print("Warning! Very low storage capacity")
-    logging.warning("Warning! Very low storage capacity")
+elif RAMsoftlimit > RAM < RAMhardlimit:
+    print("Warning! Very low available RAM at", RAM, "GB")
+    logging.warning("Warning! Very low available RAM at %s GB", RAM)
+
+if HDDsoftlimit > HDD > HDDhardlimit:
+    print('Low available storage capacity at', HDD, "GB")
+    logging.warning("Low available storage capacity at %s GB", HDD)
+
+elif HDDsoftlimit > HDD < HDDhardlimit:
+    print("Warning! Very low available storage capacity at", HDD, "GB")
+    logging.warning("Warning! Very low available storage capacity at %s GB", HDD)

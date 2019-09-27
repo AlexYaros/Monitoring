@@ -4,3 +4,87 @@
 2019-09-25 13:18:07,808 Warning! Very low storage capacity
 2019-09-25 13:18:16,649 High cpu usage
 2019-09-25 13:18:27,740 Warning! Very high cpu usage
+2019-09-26 14:21:39,590 High cpu usage
+2019-09-26 14:21:50,081 High cpu usage
+2019-09-26 15:05:15,902 High cpu usage
+2019-09-27 13:44:09,360 Warning! Very high cpu usage
+2019-09-27 13:44:32,356 Low available RAM
+2019-09-27 13:50:55,488 High cpu usage at
+2019-09-27 13:51:33,668 High cpu usage at
+2019-09-27 13:51:33,771 55.0
+2019-09-27 13:52:16,219 High cpu usage at
+2019-09-27 13:52:16,321 17.9
+2019-09-27 13:52:30,986 High cpu usage at
+2019-09-27 13:52:31,087 15.0
+2019-09-27 13:52:31,188 High cpu usage at
+2019-09-27 13:52:31,289 13.7
+2019-09-27 13:52:52,427 11.1
+2019-09-27 13:52:52,732 7.5
+2019-09-27 13:53:10,996 11.3
+2019-09-27 13:53:11,302 16.7
+2019-09-27 13:54:57,978 High cpu usage at
+2019-09-27 13:54:58,080 22.9
+2019-09-27 13:54:58,182 High cpu usage at
+2019-09-27 13:54:58,283 16.9
+2019-09-27 13:59:22,968 High cpu usage at
+2019-09-27 13:59:23,072 High cpu usage at
+2019-09-27 13:59:45,025 High cpu usage at
+2019-09-27 14:00:37,867 High cpu usage at 12.7
+2019-09-27 14:03:30,341 High cpu usage at 16.5
+2019-09-27 14:04:03,639 High cpu usage at 22.4
+2019-09-27 14:04:21,091 High cpu usage at 15.2
+2019-09-27 14:04:30,641 High cpu usage at 17.3
+2019-09-27 14:04:49,226 High cpu usage at 7.5
+2019-09-27 14:05:12,261 High cpu usage at 14.3
+2019-09-27 14:08:26,102 High cpu usage at 18.5
+2019-09-27 14:08:43,576 High cpu usage at 20.7
+2019-09-27 14:10:06,927 Warning! Very high cpu usage
+2019-09-27 14:10:33,802 Warning! Very high cpu usage
+2019-09-27 14:11:02,184 Warning! Very high cpu usage
+2019-09-27 14:11:42,224 Warning! Very high cpu usage
+2019-09-27 14:12:22,327 Warning! Very high cpu usage
+2019-09-27 14:12:30,788 Warning! Very high cpu usage
+2019-09-27 14:12:33,045 Warning! Very high cpu usage
+2019-09-27 14:12:34,886 Warning! Very high cpu usage
+2019-09-27 14:12:36,223 Warning! Very high cpu usage
+2019-09-27 14:12:37,214 Warning! Very high cpu usage
+2019-09-27 14:12:38,132 Warning! Very high cpu usage
+2019-09-27 14:12:39,276 Warning! Very high cpu usage
+2019-09-27 14:12:40,554 Warning! Very high cpu usage
+2019-09-27 14:12:41,798 Warning! Very high cpu usage
+2019-09-27 14:14:11,573 High cpu usage at 24.7
+2019-09-27 14:14:19,159 High cpu usage at 1.3
+2019-09-27 14:14:26,926 High cpu usage at 1.3
+2019-09-27 14:15:01,599 High cpu usage at 17.2
+2019-09-27 14:15:27,300 High cpu usage at 7.6
+2019-09-27 14:15:51,782 High cpu usage at 7.5
+2019-09-27 14:15:57,005 High cpu usage at 5.3
+2019-09-27 14:16:18,495 High cpu usage at 4.5
+2019-09-27 14:16:22,605 High cpu usage at 6.3
+2019-09-27 14:16:46,842 High cpu usage at 8.7
+2019-09-27 14:16:50,156 High cpu usage at 2.8
+2019-09-27 14:17:18,223 High cpu usage at 7.5
+2019-09-27 14:19:30,468 High cpu usage at 10.5
+2019-09-27 14:19:45,341 High cpu usage at 7.6
+2019-09-27 14:19:56,721 High cpu usage at 7.7
+2019-09-27 14:20:08,334 High cpu usage at 10.7
+2019-09-27 14:20:22,339 High cpu usage at 8.8
+2019-09-27 14:20:25,471 High cpu usage at 5.8
+2019-09-27 14:20:42,128 High cpu usage at 12.3
+2019-09-27 14:21:40,991 High cpu usage at 7.9
+2019-09-27 14:22:05,602 High cpu usage at 8.7
+2019-09-27 14:23:48,336 High cpu usage at 4.0
+2019-09-27 14:24:36,394 High cpu usage at 5.5
+2019-09-27 14:24:36,896 Warning! Very high cpu usage at 5.5
+2019-09-27 14:25:04,485 High cpu usage at 5.7
+2019-09-27 14:25:09,983 High cpu usage at 6.3
+2019-09-27 14:33:30,433 Low available RAM at 3.19
+2019-09-27 14:33:53,033 Low available RAM at 3.19
+2019-09-27 14:34:55,985 Warning! Very low available RAM at 3.18
+2019-09-27 14:35:14,838 Warning! Very low available RAM at 3.2 GB
+2019-09-27 14:35:21,419 Warning! Very low available RAM at 3.19 GB
+2019-09-27 14:35:40,058 Warning! Very low available RAM at 3.2 GB
+2019-09-27 14:35:50,996 Low available RAM at 3.2 GB
+2019-09-27 14:37:24,858 Low available RAM at 3.19 GB
+2019-09-27 14:39:41,346 Low available storage capacity at 97.37 GB
+2019-09-27 14:39:57,022 Warning! Very low available storage capacity at 97.37 GB
