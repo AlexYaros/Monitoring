@@ -112,3 +112,35 @@
 2019-09-27 17:56:00,601 - WARNING - Low available storage capacity at 97.36 GB
 2019-09-27 17:59:35,935 - WARNING - Low available storage capacity at 97.36 GB
 2019-09-27 18:00:04,860 - WARNING - Low available storage capacity at 97.36 GB
+2019-09-27 20:57:16,875 - WARNING - Low available storage capacity at 97.34 GB
+2019-09-27 20:57:37,989 - WARNING - Low available storage capacity at 97.34 GB
+2019-09-27 20:57:39,783 - WARNING - Low available storage capacity at 97.34 GB
+2019-09-27 20:58:38,293 - WARNING - Low available storage capacity at 97.34 GB
+2019-09-27 20:58:40,069 - WARNING - Low available storage capacity at 97.34 GB
+2019-09-27 20:58:46,247 - WARNING - Low available storage capacity at 97.34 GB
+2019-09-27 20:59:05,970 - WARNING - Low available storage capacity at 97.34 GB
+2019-09-27 21:02:52,536 - WARNING - Low available storage capacity at 97.34 GB
+2019-09-27 21:03:13,902 - WARNING - Low available RAM at 4.22 GB
+2019-09-27 21:03:15,154 - WARNING - Low available storage capacity at 97.34 GB
+2019-09-27 21:04:11,983 - WARNING - Low available RAM at 4.17 GB
+2019-09-27 21:04:13,329 - WARNING - Low available storage capacity at 97.34 GB
+2019-09-27 21:04:42,579 - WARNING - Low available RAM at 4.15 GB
+2019-09-27 21:04:43,939 - WARNING - Low available storage capacity at 97.34 GB
+2019-09-27 21:07:44,864 - WARNING - Low available RAM at 3.99 GB
+2019-09-27 21:07:46,217 - WARNING - Low available storage capacity at 97.33 GB
+2019-09-27 21:09:02,620 - WARNING - Low available RAM at 3.86 GB
+2019-09-27 21:10:45,583 - WARNING - Low available RAM at 3.77 GB
+2019-09-27 21:11:19,791 - WARNING - Low available RAM at 3.77 GB
+2019-09-27 21:11:46,326 - WARNING - Low available RAM at 3.76 GB
+2019-09-27 21:12:01,166 - WARNING - Low available RAM at 3.76 GB
+2019-09-27 21:12:02,142 - WARNING - Low available storage capacity at 97.33 GB
+2019-09-27 21:13:17,765 - WARNING - Low available RAM at 3.71 GB
+2019-09-27 21:13:18,915 - WARNING - Low available storage capacity at 97.33 GB
+2019-09-27 21:13:55,890 - WARNING - Low available RAM at 3.68 GB
+2019-09-27 21:13:56,909 - WARNING - Low available storage capacity at 97.33 GB
+2019-09-27 21:14:35,780 - WARNING - Low available RAM at 3.66 GB
+2019-09-27 21:14:36,946 - WARNING - Low available storage capacity at 97.33 GB
+2019-09-27 21:15:42,135 - WARNING - Low available RAM at 3.62 GB
+2019-09-27 21:15:43,208 - WARNING - Low available storage capacity at 97.33 GB
+2019-09-27 21:15:59,307 - CRITICAL - Warning! Very low available RAM at 3.6 GB
+2019-09-27 21:16:00,344 - WARNING - Low available storage capacity at 97.33 GB

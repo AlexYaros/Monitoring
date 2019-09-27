@@ -2,7 +2,8 @@ import logging
 import MonitoringV
 import configparser
 import os
-import smtplib, ssl
+import smtplib
+import ssl
 
 config = configparser.ConfigParser()
 config.read("config.ini")
@@ -13,10 +14,6 @@ empfaenger = str(config.get("SMTP", "empfaenger"))
 smtphost = str(config.get("SMTP", "smtphost"))
 port = int(config.get("SMTP", "port"))
 
-message = """\
-Subject: Hi there
-
-This message is sent from Python."""
 
 def mail():
     # Create a secure SSL context
@@ -42,25 +39,42 @@ CPU = MonitoringV.CPU()
 RAM = MonitoringV.RAM()
 HDD = MonitoringV.HDD()
 
-#print(CPU)
-#print(RAM)
-#print(HDD)
 
 if CPUsoftlimit < CPU < CPUhardlimit:
     print("High cpu usage at", CPU, "%")
     logging.warning("High cpu usage at %s", CPU)
+    message = """\
+Subject: Monitoring warning
+
+High cpu usage! Check the log file for more information."""
+    mail()
 
 elif CPUsoftlimit < CPU > CPUhardlimit:
     print("Warning! Very high cpu usage at", CPU, "%")
-    logging.warning("Warning! Very high cpu usage at %s", CPU)
+    logging.critical("Warning! Very high cpu usage at %s", CPU)
+    message = """\
+Subject: Monitoring warning
+
+Warning! Very high cpu usage! Check the log file for more information."""
+    mail()
 
 if RAMsoftlimit > RAM > RAMhardlimit:
     print("Low available RAM at", RAM, "GB")
     logging.warning('Low available RAM at %s GB', RAM)
+    message = """\
+Subject: Monitoring warning
+
+Low available RAM! Check the log file for more information."""
+    mail()
 
 elif RAMsoftlimit > RAM < RAMhardlimit:
     print("Warning! Very low available RAM at", RAM, "GB")
-    logging.warning("Warning! Very low available RAM at %s GB", RAM)
+    logging.critical("Warning! Very low available RAM at %s GB", RAM)
+    message = """\
+Subject: Monitoring warning
+
+Warning! Very low available RAM! Check the log file for more information."""
+    mail()
 
 if HDDsoftlimit > HDD > HDDhardlimit:
     print('Low available storage capacity at', HDD, "GB")
@@ -68,9 +82,14 @@ if HDDsoftlimit > HDD > HDDhardlimit:
     message = """\
 Subject: Monitoring warning
 
-Low available storage capacity at)."""
+Low available storage capacity! Check the log file for more information."""
     mail()
 
 elif HDDsoftlimit > HDD < HDDhardlimit:
     print("Warning! Very low available storage capacity at", HDD, "GB")
-    logging.warning("Warning! Very low available storage capacity at %s GB", HDD)
+    logging.critical("Warning! Very low available storage capacity at %s GB", HDD)
+    message = """\
+Subject: Monitoring warning
+
+Warning! Very low available storage capacity! Check the log file for more information."""
+    mail()

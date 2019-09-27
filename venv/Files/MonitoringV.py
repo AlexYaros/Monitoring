@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# import alarm
+
 import psutil
 import argparse
 import os
@@ -55,4 +55,5 @@ if __name__ == "__main__":
         print("Available RAM =", RAM(), "GB")
         print("Current CPU usage =", CPU(), "%")
 
+print()
 import alarm
