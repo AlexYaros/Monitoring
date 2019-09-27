@@ -1,6 +1,7 @@
 import logging
 import MonitoringV
 import configparser
+import os
 
 config = configparser.ConfigParser()
 config.read("config.ini")
@@ -12,7 +13,7 @@ CPUsoftlimit = float(config.get("LIMIT", "CPUsoftlimit"))
 CPUhardlimit = float(config.get("LIMIT", "CPUhardlimit"))
 
 
-logging.basicConfig(filename='app.log', format='%(asctime)s %(message)s')
+logging.basicConfig(filename='app.log', format='%(asctime)s - %(levelname)s - %(message)s')
 
 CPU = MonitoringV.CPU()
 RAM = MonitoringV.RAM()
